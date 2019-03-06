@@ -2,12 +2,20 @@ const PACKAGE = require(`../package.json`);
 
 module.exports = {
     welcome: `
-        \rYou're using \x1b[33m${PACKAGE.name.toUpperCase()}\x1b[0m ${PACKAGE.version}
-        \rDeveloped by \x1b[32m${PACKAGE.author}\x1b[0m (2019)
+        \rYou're using \x1b[33m${PACKAGE.name.toUpperCase()}\x1b[0m v${PACKAGE.version}
+        \r${PACKAGE.description}
+        \rDeveloped by \x1b[32m@jadeallencook\x1b[0m
 
-        \r\x1b[36mReact Projects\x1b[0m
-        \r• new react project-name (n r p-n)
-        \r• new react component component-name (n r c c-n)
+        \r\x1b[36mReact Framework\x1b[0m
+
+        \r\x1b[33m// Project\x1b[0m
+        \r- \x1b[32mcookup\x1b[0m react name path 
+        \r- \x1b[32mcookup\x1b[0m r name path
+
+        \r\x1b[33m// Component\x1b[0m
+        \r- \x1b[32mcookup\x1b[0m react component name path
+        \r- \x1b[32mcookup\x1b[0m r c name path
+        \r- \x1b[32mcookup\x1b[0m r c name path -state
     `,
     new: {
         react: {

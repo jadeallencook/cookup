@@ -6,33 +6,31 @@ const ReactComponent = require('./src/new-react-component.js');
 const WelcomeMessage = require('./src/welcome-message.js');
 
 const App = {
-    new: {
-        react: {
-            component: {
-                default: () => ReactComponent(args[5], args[6], args[7])
-            },
-            default: () => ReactProject(args[4])
+    react: {
+        component: {
+            default: () => ReactComponent(args[5], args[6], args[7])
         },
-        default: () => WelcomeMessage()
+        default: () => ReactProject(args[4])
     },
     default: () => WelcomeMessage()
 };
 
 function ProKeys(obj, value) {
+    if (!obj) return false;
     const keys = Object.keys(obj);
-    const length = keys.length;
-    return keys.map((key, i) => {
-        if (key[0] === value) return key;
-        else if (i + 1 === length) return false;
+    let string = false;
+    keys.map(key => {
+        if (key[0] === value) string = key;
     });
+    return string;
 }
 
 let command = App;
 args.forEach((key, x) => {
-    if (x > 1) {
-        const ProKey = ProKeys(command, key)[0];
+    if (x > 1 && typeof command === 'object') {
+        const ProKey = ProKeys(command, key);
         key = (key.length === 1 && ProKey) ? ProKey : key;
-        command = (command[key]) ? command[key] : command = command['default'];
+        command = (key in command) ? command[key] : command['default'];
     }
 });
 if (typeof command === 'object') command = command['default'];

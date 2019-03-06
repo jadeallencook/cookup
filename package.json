@@ -1,7 +1,7 @@
 {
   "name": "cookup",
-  "version": "1.0.1",
-  "description": "CLI tool for web developers.",
+  "version": "1.0.2",
+  "description": "CLI tool for web developers",
   "main": "index.js",
   "bin": {
     "cookup": "index.js"
