@@ -1,10 +1,10 @@
 {
-  "name": "auto-dev",
+  "name": "cookup",
   "version": "1.0.0",
   "description": "CLI tool for web developers.",
   "main": "index.js",
   "bin": {
-    "auto-dev": "index.js"
+    "cookup": "index.js"
   },
   "dependencies": {
     "fs-extra": "^7.0.1"
@@ -17,6 +17,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Onflo",
+  "author": "@jadeallencook",
   "license": "ISC"
 }
