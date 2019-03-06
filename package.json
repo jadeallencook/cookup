@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "CLI tool for web developers.",
   "main": "index.js",
+  "bin": {
+    "auto-dev": "index.js"
+  },
   "dependencies": {
     "fs-extra": "^7.0.1"
   },
