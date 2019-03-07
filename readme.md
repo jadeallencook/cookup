@@ -2,9 +2,25 @@
 
 CLI tool for web developers
 
-### React Framework
+To get started with **cookup** run:
 
-#### Project
+```npm install cookup -g```
+
+If you get an auth error, try running:
+
+```sudo npm install cookup -g```
+
+Once it's installed, try:
+
+```cookup```
+
+And you should get a welcome message!
+
+## React Framework
+
+By using **cookup**, you can easily create new React projects and components.
+
+### Project
 To create a new React project use: 
 
 ``` cookup react project-name```
@@ -34,11 +50,11 @@ What it cooks up:
     - yarn.lock
     - .gitignore
 
-This is the same as **create-react-app** *v2.0.2*, using SCSS, without most of the boilerplate UI. You still need to run **npm install** before running **npm start**. When the project deploys, it will start be accessable at **http://localhost:3000/**
+This is the same as **create-react-app** *v2.0.2*, using SCSS, without most of the boilerplate UI. You still need to run **npm install** before running **npm start**. When the project deploys, it will start be accessible at **http://localhost:3000/** via your browser.
 
-#### Components
+### Components
 
-To create a new React project use: 
+To create a new React component use: 
 
 ``` cookup react component ComponentName```
 

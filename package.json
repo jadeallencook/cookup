@@ -1,6 +1,6 @@
 {
   "name": "cookup",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "CLI tool for web developers",
   "main": "index.js",
   "keywords": ["cli", "react", "web development", "scss"],
