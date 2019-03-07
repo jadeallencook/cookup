@@ -34,7 +34,7 @@ What it cooks up:
     - yarn.lock
     - .gitignore
 
-This is the same as **create-react-app** *v2.0.2* without most of the boilerplate UI. You still need to run **npm install** before running **npm start**. When the project deploys, it will start be accessable at **http://localhost:3000/**
+This is the same as **create-react-app** *v2.0.2*, using SCSS, without most of the boilerplate UI. You still need to run **npm install** before running **npm start**. When the project deploys, it will start be accessable at **http://localhost:3000/**
 
 #### Components
 
