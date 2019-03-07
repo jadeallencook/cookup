@@ -40,16 +40,16 @@ This is the same as **create-react-app** *v2.0.2* without most of the boilerplat
 
 To create a new React project use: 
 
-``` cookup react component component-name```
+``` cookup react component ComponentName```
 
 OR (short hand):
 
-``` cookup r c component-name```
+``` cookup r c ComponentName```
 
 Make it stateless:
 
-``` cookup r c component-name -state```
+``` cookup r c ComponentName -state```
 
 Add a path:
 
-``` cook r c component-name path-name/ -state```
+``` cook r c ComponentName path-name/ -state```
