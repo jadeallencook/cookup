@@ -8,9 +8,9 @@ const WelcomeMessage = require('./src/welcome-message.js');
 const App = {
     react: {
         component: {
-            default: () => ReactComponent(args[5], args[6], args[7])
+            default: () => ReactComponent(args[4], args[5], args[6])
         },
-        default: () => ReactProject(args[4])
+        default: () => ReactProject(args[3])
     },
     default: () => WelcomeMessage()
 };

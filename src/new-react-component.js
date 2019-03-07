@@ -7,6 +7,7 @@ module.exports = function (name, path, stateless) {
 
     console.log(working());
 
+    console.log(name);
     if (!name || name === '-state') name = 'new-component';
     stateless = (
         stateless === '-state' ||
