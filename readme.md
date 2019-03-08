@@ -1,7 +1,5 @@
 # cookup
 
-CLI tool for web developers
-
 To get started with **cookup** run:
 
 ```npm install cookup -g```
@@ -20,7 +18,8 @@ And you should get a welcome message!
 
 By using **cookup**, you can easily create new React projects and components.
 
-### Project
+### Projects
+
 To create a new React project use: 
 
 ``` cookup react project-name```
@@ -50,7 +49,7 @@ What it cooks up:
     - yarn.lock
     - .gitignore
 
-This is the same as **create-react-app** *v2.0.2*, using SCSS, without most of the boilerplate UI. You still need to run **npm install** before running **npm start**. When the project deploys, it will start be accessible at **http://localhost:3000/** via your browser.
+This is the same as **create-react-app** *v2.0.2* with SCSS installed and most of the boilerplate UI removed. You still need to run **npm install** before running **npm start**. When the project deploys, it will start be accessible at **http://localhost:3000/** via your browser.
 
 ### Components
 
@@ -69,3 +68,75 @@ Make it stateless:
 Add a path:
 
 ``` cook r c ComponentName path-name/ -state```
+
+## SCSS
+
+### Style Sheets
+
+To create a new SCSS stylesheet use:
+
+``` cookup scss stylesheet-name```
+
+This will spinup a new stylesheet:
+
+```scss
+div.stylesheet-name { }
+
+@media only screen and (max-device-width: 480px) {
+    div.stylesheet-name { }
+}
+```
+
+### Normalize
+
+``` cookup scss normalize```
+
+```scss
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+a:link,
+a:hover,
+a:visited,
+a:active {
+    text-decoration: none;
+}
+```
+
+### Sizes
+
+``` cookup scss sizes```
+
+```scss
+$margin: 15px;
+$padding: 15px;
+
+$fontSize1: .75em;
+$fontSize2: 1em;
+$fontSize3: 1.5em;
+$fontSize4: 2em;
+```
+
+### Colors
+
+``` cookup scss colors```
+
+```scss
+$darkgrey: #111111;
+$medgrey: #222222;
+$grey: #333333;
+$lightgrey: #444444;
+
+$white: #FFFFFF;
+$black: #000000;
+
+$color1: #1982be;
+$color2: #34a747;
+$color3: #c8d41d;
+$color4: #d4231d;
+```

@@ -4,6 +4,7 @@ const args = process.argv;
 const ReactProject = require('./src/new-react-project.js');
 const ReactComponent = require('./src/new-react-component.js');
 const WelcomeMessage = require('./src/welcome-message.js');
+const StyleSheet = require('./src/new-style.js');
 
 const App = {
     react: {
@@ -11,6 +12,9 @@ const App = {
             default: () => ReactComponent(args[4], args[5], args[6])
         },
         default: () => ReactProject(args[3])
+    },
+    scss: {
+        default: () => StyleSheet(args[3])
     },
     default: () => WelcomeMessage()
 };
