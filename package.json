@@ -7,15 +7,13 @@
   "bin": {
     "cookup": "index.js"
   },
-  "dependencies": {
-    "fs-extra": "^7.0.1"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com:jadeallencook/cookup.git"
   },
   "devDependencies": {},
   "scripts": {
+    "cookup": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "@jadeallencook",
