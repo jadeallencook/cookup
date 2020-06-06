@@ -11,22 +11,23 @@ First we need to create the template **(react-template.js)**:
 ```js
 import React from 'react';
  
-function Component() {
-   return (<div className="Component"></div>)
+function __1__() {
+   return (<div className="__1__"></div>)
 }
  
-export default Component;
+export default __1__;
 ```
  
+The **__1__** will be replaced with the first parameter.
+
 Now we can use cookup to store the boilerplate:
  
 ```
-cookup react-template.js react-component Component
+cookup react-template.js react-component
 ```
  
 1. *The first parameter is the boilerplate's filename.*
 1. *The second parameter is the command used to generate a new file with cookup.*
-1. *The remaining parameters are strings of text that will be replaced with parameters.*
  
 This is how we can then dynamically generate a new component:
  
