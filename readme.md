@@ -1,142 +1,47 @@
-# cookup
-
-To get started with **cookup** run:
-
-```npm install cookup -g```
-
-If you get an auth error, try running:
-
-```sudo npm install cookup -g```
-
-Once it's installed, try:
-
-```cookup```
-
-And you should get a welcome message!
-
-## React Framework
-
-By using **cookup**, you can easily create new React projects and components.
-
-### Projects
-
-To create a new React project use: 
-
-``` cookup react project-name```
-
-OR (short hand):
-
-``` cookup r project-name```
-
-Add a path:
-
-``` cookup r project-name path-name/```
-
-What it cooks up:
-- project-name/
-    - public/
-        - index.html
-        - manifest.json
-    - src/
-        - App.js
-        - App.scss
-        - App.test.js
-        - index.js
-        - index.scss
-        - serviceWorker.js
-        - style.global.scss
-    - package.json
-    - yarn.lock
-    - .gitignore
-
-This is the same as **create-react-app** *v2.0.2* with SCSS installed and most of the boilerplate UI removed. You still need to run **npm install** before running **npm start**. When the project deploys, it will start be accessible at **http://localhost:3000/** via your browser.
-
-### Components
-
-To create a new React component use: 
-
-``` cookup react component ComponentName```
-
-OR (short hand):
-
-``` cookup r c ComponentName```
-
-Make it stateless:
-
-``` cookup r c ComponentName -state```
-
-Add a path:
-
-``` cook r c ComponentName path-name/ -state```
-
-## SCSS
-
-### Style Sheets
-
-To create a new SCSS stylesheet use:
-
-``` cookup scss stylesheet-name```
-
-This will spinup a new stylesheet:
-
-```scss
-div.stylesheet-name { }
-
-@media only screen and (max-device-width: 480px) {
-    div.stylesheet-name { }
+# Cookup
+ 
+Cookup stores your boilerplate code and dynamically generates new files.
+ 
+## Overview
+ 
+Let's create a boilerplate for generating new React components.
+ 
+First we need to create the template **(react-template.js)**:
+ 
+```js
+import React from 'react';
+ 
+function Component() {
+   return (<div className="Component"></div>)
 }
+ 
+export default Component;
 ```
-
-### Normalize
-
-``` cookup scss normalize```
-
-```scss
-html,
-body {
-    margin: 0px;
-    padding: 0px;
-    height: 100%;
-    width: 100%;
+ 
+Now we can use cookup to store the boilerplate:
+ 
+```
+cookup react-template.js react-component Component
+```
+ 
+1. *The first parameter is the boilerplate's filename.*
+1. *The second parameter is the command used to generate a new file with cookup.*
+1. *The remaining parameters are strings of text that will be replaced with parameters.*
+ 
+This is how we can then dynamically generate a new component:
+ 
+```
+cookup react-component video-player VideoPlayer
+```
+ 
+The command above will output this **(video-player.js)**:
+ 
+```js
+import React from 'react';
+ 
+function VideoPlayer() {
+   return (<div className="VideoPlayer"></div>)
 }
-
-a:link,
-a:hover,
-a:visited,
-a:active {
-    text-decoration: none;
-}
-```
-
-### Sizes
-
-``` cookup scss sizes```
-
-```scss
-$margin: 15px;
-$padding: 15px;
-
-$fontSize1: .75em;
-$fontSize2: 1em;
-$fontSize3: 1.5em;
-$fontSize4: 2em;
-```
-
-### Colors
-
-``` cookup scss colors```
-
-```scss
-$darkgrey: #111111;
-$medgrey: #222222;
-$grey: #333333;
-$lightgrey: #444444;
-
-$white: #FFFFFF;
-$black: #000000;
-
-$color1: #1982be;
-$color2: #34a747;
-$color3: #c8d41d;
-$color4: #d4231d;
+ 
+export default VideoPlayer;
 ```
