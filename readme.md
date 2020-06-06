@@ -18,7 +18,7 @@ function __1__() {
 export default __1__;
 ```
  
-The **__1__** will be replaced with the first parameter.
+The ``__1__`` will be replaced with the first parameter.
 
 Now we can use cookup to store the boilerplate:
  
