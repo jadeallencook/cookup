@@ -11,28 +11,25 @@ First we need to create the template **(react-template.js)**:
 ```js
 import React from 'react';
  
-function __1__() {
-   return (<div className="__1__"></div>)
+function __0__() {
+   return (<div className="__0__"></div>)
 }
  
-export default __1__;
+export default __0__;
 ```
  
-The ``__1__`` will be replaced with the first parameter.
+The ``__0__`` will be replaced with the first parameter.
 
 Now we can use cookup to store the boilerplate:
  
 ```
-cookup react-template.js react-component
+cookup react-template.js
 ```
- 
-1. *The first parameter is the boilerplate's filename.*
-1. *The second parameter is the command used to generate a new file with cookup.*
- 
-This is how we can then dynamically generate a new component:
+
+We can then dynamically generate a new component:
  
 ```
-cookup react-component video-player VideoPlayer
+cookup react-component/video-player js VideoPlayer
 ```
  
 The command above will output this **(video-player.js)**:
@@ -45,4 +42,25 @@ function VideoPlayer() {
 }
  
 export default VideoPlayer;
+```
+## Basic Uses
+
+You can import a boilerplate like this:
+
+```
+cookup boilerplate.ext
+```
+
+This will store a copy of it in your ```/tmp/``` directory.
+
+You can then export a new copy of your boilerplate like this:
+
+```
+cookup boilerplate ext
+```
+
+If you want to rename it, you do it like such:
+
+```
+cookup boilerplate/new-name ext
 ```
